@@ -22,6 +22,7 @@ namespace WebShopServices.Services
             _db = db;
             _mapper = mapper;
         }
+        
         public async Task<IEnumerable<ClientDto>> GetClients(CancellationToken cancellationToken)
         {
             var clients = await _db.Clients.ToListAsync(cancellationToken);

@@ -23,12 +23,12 @@ namespace WebShopDomain.Migrations
                     b.Property<int>("OrderListId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductsId")
+                    b.Property<int>("ProductListId")
                         .HasColumnType("int");
 
-                    b.HasKey("OrderListId", "ProductsId");
+                    b.HasKey("OrderListId", "ProductListId");
 
-                    b.HasIndex("ProductsId");
+                    b.HasIndex("ProductListId");
 
                     b.ToTable("OrderProduct");
                 });
@@ -99,7 +99,7 @@ namespace WebShopDomain.Migrations
 
                     b.HasIndex("ClientId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("WebShopDomain.Entities.Product", b =>
@@ -137,7 +137,7 @@ namespace WebShopDomain.Migrations
 
                     b.HasOne("WebShopDomain.Entities.Product", null)
                         .WithMany()
-                        .HasForeignKey("ProductsId")
+                        .HasForeignKey("ProductListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

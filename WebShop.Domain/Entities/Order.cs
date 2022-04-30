@@ -11,6 +11,6 @@ namespace WebShopDomain.Entities
         public int ClientId { get; set; }
 
         public Client Client { get; set; }
-        public List<Product> Products { get; set; }
+        public List<Product> ProductList { get; set; }
     }
 }

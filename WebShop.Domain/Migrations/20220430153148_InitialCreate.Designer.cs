@@ -9,8 +9,8 @@ using WebShopDomain.Contexts;
 namespace WebShopDomain.Migrations
 {
     [DbContext(typeof(WebShopContext))]
-    [Migration("20220429131739_InitDatabase")]
-    partial class InitDatabase
+    [Migration("20220430153148_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,12 +25,12 @@ namespace WebShopDomain.Migrations
                     b.Property<int>("OrderListId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductsId")
+                    b.Property<int>("ProductListId")
                         .HasColumnType("int");
 
-                    b.HasKey("OrderListId", "ProductsId");
+                    b.HasKey("OrderListId", "ProductListId");
 
-                    b.HasIndex("ProductsId");
+                    b.HasIndex("ProductListId");
 
                     b.ToTable("OrderProduct");
                 });
@@ -101,7 +101,7 @@ namespace WebShopDomain.Migrations
 
                     b.HasIndex("ClientId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("WebShopDomain.Entities.Product", b =>
@@ -139,7 +139,7 @@ namespace WebShopDomain.Migrations
 
                     b.HasOne("WebShopDomain.Entities.Product", null)
                         .WithMany()
-                        .HasForeignKey("ProductsId")
+                        .HasForeignKey("ProductListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
