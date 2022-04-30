@@ -1,0 +1,17 @@
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\CQRS.deps.json
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\CQRS.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\ref\CQRS.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\CQRS.pdb
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\WebShop.Domain.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\WebShop.Services.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\WebShop.Services.pdb
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\bin\Debug\net5.0\WebShop.Domain.pdb
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.csproj.AssemblyReference.cache
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.AssemblyInfoInputs.cache
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.AssemblyInfo.cs
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.csproj.CoreCompileInputs.cache
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.csproj.CopyComplete
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\ref\CQRS.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\CQRS\obj\Debug\net5.0\CQRS.pdb

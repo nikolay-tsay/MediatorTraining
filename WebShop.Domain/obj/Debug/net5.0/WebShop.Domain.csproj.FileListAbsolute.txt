@@ -1,0 +1,15 @@
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\bin\Debug\net5.0\WebShop.Domain.deps.json
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\bin\Debug\net5.0\WebShop.Domain.runtimeconfig.json
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\bin\Debug\net5.0\WebShop.Domain.runtimeconfig.dev.json
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\bin\Debug\net5.0\WebShop.Domain.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\bin\Debug\net5.0\ref\WebShop.Domain.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\bin\Debug\net5.0\WebShop.Domain.pdb
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.csproj.AssemblyReference.cache
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.AssemblyInfoInputs.cache
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.AssemblyInfo.cs
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.csproj.CoreCompileInputs.cache
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\ref\WebShop.Domain.dll
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.pdb
+C:\Users\tsayn\OneDrive\Рабочий стол\Все\Projects\PP\MediatorTraining\WebShop.Domain\obj\Debug\net5.0\WebShop.Domain.genruntimeconfig.cache
