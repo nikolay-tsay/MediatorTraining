@@ -1,0 +1,12 @@
+﻿.idea
+MediatorTraining.sln.DotSettings.user
+
+/CQRS/bin/
+/WebShop.Api/bin/
+/WebShop.Api/obj/
+/WebShop.Common/bin/
+/WebShop.Common/obj/
+/WebShop.Domain/bin/
+/WebShop.Domain/obj/
+/WebShop.Services/bin/
+/WebShop.Services/obj/

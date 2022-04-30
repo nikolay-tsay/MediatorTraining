@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KjP9xrng8uKOqqBGtk7Kb+iy2eblruy4vHDvW4FaSRgQuFaGgTLkCs0m6XLrHgeyB1z4lMv8r2ZamX7iib9poQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tsayn\\OneDrive\\Рабочий стол\\Все\\Projects\\PP\\MediatorTraining\\WebShop.Common\\WebShop.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tsayn\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\tsayn\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
