@@ -13,7 +13,7 @@ using WebShopDomain.Models;
 namespace WebShopApi.Controllers.Product
 {
     [ApiController]
-    [Route("api/product")]
+    [Route("api/")]
     public class ProductController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -26,6 +26,7 @@ namespace WebShopApi.Controllers.Product
         }
 
         [HttpGet]
+        [Route("[controller]")]
         public async Task<IActionResult> GetProducts()
         {
             var result = await _mediator.Send(new GetAllProductsQuery());
@@ -34,7 +35,7 @@ namespace WebShopApi.Controllers.Product
         }
 
         [HttpGet]
-        [Route("/{id}")]
+        [Route("[controller]/{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
             var result = await _mediator.Send(new GetProductByIdQuery(id));
@@ -43,6 +44,7 @@ namespace WebShopApi.Controllers.Product
         }
         
         [HttpPost]
+        [Route("[controller]")]
         public async Task<IActionResult> AddProduct([FromBody] CreateProductRequest request)
         {
             var mapped = _mapper.Map<ProductDto>(request);
@@ -51,7 +53,7 @@ namespace WebShopApi.Controllers.Product
         }
         
         [HttpPut]
-        [Route("/{id}")]
+        [Route("[controller]/{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] UpdateProductRequest request)
         {
             var mapped = _mapper.Map<ProductDto>(request);
@@ -62,7 +64,7 @@ namespace WebShopApi.Controllers.Product
         
         
         [HttpDelete]
-        [Route("/{id}")]
+        [Route("[controller]/{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             await _mediator.Send(new DeleteProductCommand(id));

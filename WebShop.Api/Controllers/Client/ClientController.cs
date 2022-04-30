@@ -13,7 +13,7 @@ using WebShopDomain.Models;
 namespace WebShopApi.Controllers.Client
 {
     [ApiController]
-    [Route("api/client")]
+    [Route("api/")]
     public class ClientController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -28,6 +28,7 @@ namespace WebShopApi.Controllers.Client
 
 
         [HttpGet]
+        [Route("[controller]")]
         public async Task<IActionResult> GetClients()
         {
             var result = await _mediator.Send(new GetClientsQuery());
@@ -38,7 +39,7 @@ namespace WebShopApi.Controllers.Client
         }
         
         [HttpGet]
-        [Route("/{id}")]
+        [Route("[controller]/{id}")]
         public async Task<IActionResult> GetClient(int id)
         {
             var result = await _mediator.Send(new GetClientByIdQuery(id));
@@ -47,6 +48,7 @@ namespace WebShopApi.Controllers.Client
         }
         
         [HttpPost]
+        [Route("[controller]")]
         public async Task<IActionResult> AddClient([FromBody] CreateClientRequest request)
         {
             var mapped = _mapper.Map<ClientDto>(request);
@@ -55,7 +57,7 @@ namespace WebShopApi.Controllers.Client
         }
         
         [HttpPut]
-        [Route("/{id}")]
+        [Route("[controller]/{id}")]
         public async Task<IActionResult> UpdateClient(int id, [FromBody] UpdateClientRequest request)
         {
             var mapped = _mapper.Map<ClientDto>(request);
@@ -66,7 +68,7 @@ namespace WebShopApi.Controllers.Client
         
         
         [HttpDelete]
-        [Route("/{id}")]
+        [Route("[controller]/{id}")]
         public async Task<IActionResult> DeleteClient(int id)
         {
             await _mediator.Send(new DeleteClientCommand(id));
