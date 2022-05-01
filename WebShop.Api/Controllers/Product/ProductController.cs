@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AutoMapper;
 using CQRS.Commands.Product;
 using CQRS.Handlers.Product.CommandHandlers;
@@ -7,13 +6,12 @@ using CQRS.Queries.Product;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WebShopApi.Controllers.Product.Requests;
-using WebShopApi.Controllers.Product.Responses;
 using WebShopDomain.Models;
 
 namespace WebShopApi.Controllers.Product
 {
     [ApiController]
-    [Route("api/")]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -26,25 +24,21 @@ namespace WebShopApi.Controllers.Product
         }
 
         [HttpGet]
-        [Route("[controller]")]
         public async Task<IActionResult> GetProducts()
         {
             var result = await _mediator.Send(new GetAllProductsQuery());
-            var output = _mapper.Map<IEnumerable<ProductDto>, List<ProductResponse>>(result);
-            return Ok(output);
+            return Ok(result);
         }
 
         [HttpGet]
-        [Route("[controller]/{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> GetProductById(int id)
         {
             var result = await _mediator.Send(new GetProductByIdQuery(id));
-            var output = _mapper.Map<ProductResponse>(result);
-            return Ok(output);
+            return Ok(result);
         }
         
         [HttpPost]
-        [Route("[controller]")]
         public async Task<IActionResult> AddProduct([FromBody] CreateProductRequest request)
         {
             var mapped = _mapper.Map<ProductDto>(request);
@@ -53,18 +47,17 @@ namespace WebShopApi.Controllers.Product
         }
         
         [HttpPut]
-        [Route("[controller]/{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] UpdateProductRequest request)
         {
             var mapped = _mapper.Map<ProductDto>(request);
             var result = await _mediator.Send(new UpdateProductCommand(id, mapped));
-            var output = _mapper.Map<ProductResponse>(result);
-            return Ok(output);
+            return Ok(result);
         }
         
         
         [HttpDelete]
-        [Route("[controller]/{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             await _mediator.Send(new DeleteProductCommand(id));

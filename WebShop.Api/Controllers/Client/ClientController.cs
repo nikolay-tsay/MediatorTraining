@@ -1,19 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using AutoMapper;
 using CQRS.Commands.Client;
 using CQRS.Queries.Client;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WebShopApi.Controllers.Client.Requests;
-using WebShopApi.Controllers.Client.Responses;
 using WebShopDomain.Models;
 
 namespace WebShopApi.Controllers.Client
 {
     [ApiController]
-    [Route("api/")]
+    [Route("api/[controller]")]
     public class ClientController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -28,27 +25,21 @@ namespace WebShopApi.Controllers.Client
 
 
         [HttpGet]
-        [Route("[controller]")]
         public async Task<IActionResult> GetClients()
         {
             var result = await _mediator.Send(new GetClientsQuery());
-            var output = _mapper.Map<IEnumerable<ClientDto>, List<ClientResponse>>(result);
-            return output.Any() 
-                ? Ok(result) 
-                : NoContent();
+            return Ok(result);
         }
         
         [HttpGet]
-        [Route("[controller]/{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> GetClient(int id)
         {
             var result = await _mediator.Send(new GetClientByIdQuery(id));
-            var output = _mapper.Map<ClientResponse>(result);
-            return Ok(output);
+            return Ok(result);
         }
         
         [HttpPost]
-        [Route("[controller]")]
         public async Task<IActionResult> AddClient([FromBody] CreateClientRequest request)
         {
             var mapped = _mapper.Map<ClientDto>(request);
@@ -57,18 +48,17 @@ namespace WebShopApi.Controllers.Client
         }
         
         [HttpPut]
-        [Route("[controller]/{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> UpdateClient(int id, [FromBody] UpdateClientRequest request)
         {
             var mapped = _mapper.Map<ClientDto>(request);
             var result = await _mediator.Send(new UpdateClientCommand(id, mapped));
-            var output = _mapper.Map<ClientResponse>(result);
-            return Ok(output);
+            return Ok(result);
         }
         
         
         [HttpDelete]
-        [Route("[controller]/{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> DeleteClient(int id)
         {
             await _mediator.Send(new DeleteClientCommand(id));

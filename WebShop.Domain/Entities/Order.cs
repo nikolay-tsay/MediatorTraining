@@ -9,7 +9,9 @@ namespace WebShopDomain.Entities
         public int Id { get; set; }
         [Required]
         public int ClientId { get; set; }
-
+        [Required]
+        public decimal TotalPrice { get; set; }
+        
         public Client Client { get; set; }
         public List<Product> ProductList { get; set; }
     }
