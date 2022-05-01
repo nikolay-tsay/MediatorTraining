@@ -25,7 +25,10 @@ namespace WebShopServices.Services
         
         public async Task<IEnumerable<ClientDto>> GetClients(CancellationToken cancellationToken)
         {
-            var clients = await _db.Clients.ToListAsync(cancellationToken);
+            var clients = await _db.Clients
+                .AsNoTracking()
+                .ToListAsync(cancellationToken);
+
             return _mapper.Map<List<Client>, List<ClientDto>>(clients);
         }
 

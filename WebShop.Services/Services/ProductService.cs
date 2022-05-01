@@ -25,7 +25,10 @@ namespace WebShopServices.Services
         
         public async Task<IEnumerable<ProductDto>> GetProducts(CancellationToken cancellationToken)
         {
-            var products = await _db.Products.ToListAsync(cancellationToken);
+            var products = await _db.Products
+                .AsNoTracking()
+                .ToListAsync(cancellationToken);
+            
             return _mapper.Map<List<Product>, List<ProductDto>>(products);
         }
 

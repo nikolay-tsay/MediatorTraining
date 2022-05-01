@@ -39,17 +39,17 @@ namespace WebShopApi
             {
                 mc.AddProfile(new MappingProfile());
             });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddDbContext<WebShopContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
-            
-            IMapper mapper = mapperConfig.CreateMapper();
-            services.AddSingleton(mapper);
 
             services.AddScoped<IClientService, ClientService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IOrderService, OrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
